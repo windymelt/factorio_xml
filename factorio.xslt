@@ -67,7 +67,7 @@
     <xsl:template match="item//recipeItem">
         <xsl:element name="a">
             <xsl:attribute name="href">
-                <xsl:value-of select="@name"></xsl:value-of>
+                #<xsl:value-of select="@name"></xsl:value-of>
             </xsl:attribute>
             <xsl:value-of select="."></xsl:value-of>
         </xsl:element>
