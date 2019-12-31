@@ -34,9 +34,7 @@
         <xsl:attribute name="id">
             <xsl:value-of select="@name"></xsl:value-of>
         </xsl:attribute>
-        <xsl:text>
-            <xsl:value-of select="@name"></xsl:value-of>
-        </xsl:text>
+        <xsl:value-of select="@name"></xsl:value-of>
       </xsl:element>
 
       <p><xsl:value-of select="."></xsl:value-of></p>
