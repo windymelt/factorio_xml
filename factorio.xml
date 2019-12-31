@@ -132,6 +132,27 @@
             <speed unit="spi" type="craft">10</speed>秒で<yield>1</yield>枚生産できる。
         </item>
     </section>
+    <section name="furnance">
+        <item name="stone_furnance">
+            石の炉は
+            <recipe><recipeItem name="stone">石</recipeItem><amount>5</amount>単位</recipe>を<speed unit="spi" type="craft">0.5</speed>秒かけて<yield>1</yield>基制作可能である。
+            石の炉は、精錬が必要な処理の速度基準になり、製作速度は<speed unit="x" type="work">1</speed>倍とみなす。
+        </item>
+        <item name="steel_furnance">
+            鋼鉄の炉は
+            <recipe><recipeItem name="steel_plate">鉄鋼</recipeItem><amount>6</amount>本</recipe>、
+            <recipe><recipeItem name="stone_blick">石のレンガ</recipeItem><amount>10</amount>個</recipe>で
+            <speed unit="spi" type="craft">3</speed>秒で<yield>1</yield>基製作可能である。
+            製作速度は<speed unit="x" type="work">2</speed>倍になる。
+        </item>
+        <item name="electric_furnance">
+            電気炉は
+            <recipe><recipeItem name="advanced_circuit">発展基板</recipeItem><amount>5</amount>枚</recipe>、
+            <recipe><recipeItem name="steel_plate">鉄鋼</recipeItem><amount>10</amount>本</recipe>、
+            <recipe><recipeItem name="stone_blick">石のレンガ</recipeItem><amount>10</amount>個</recipe>で
+            <speed unit="spi" type="craft">5</speed>秒に<yield>1</yield>基生産可能である。
+        </item>
+    </section>
     <section name="ore">
         <item name="iron_ore">
             鉄鉱石の産出速度は採掘手段に依存する。

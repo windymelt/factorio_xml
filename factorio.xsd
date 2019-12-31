@@ -51,14 +51,15 @@
 
     <xsd:simpleType name="speedUnitType">
         <xsd:restriction base="xsd:string">
-            <xsd:enumeration value="ips"></xsd:enumeration>
-            <xsd:enumeration value="spi"></xsd:enumeration>
+            <xsd:enumeration value="ips"><xsd:annotation><xsd:documentation xml:lang="ja">秒あたりの個数。</xsd:documentation></xsd:annotation></xsd:enumeration>
+            <xsd:enumeration value="spi"><xsd:annotation><xsd:documentation xml:lang="ja">個あたりの秒数。</xsd:documentation></xsd:annotation></xsd:enumeration>
+            <xsd:enumeration value="x"><xsd:annotation><xsd:documentation xml:lang="ja">何かを増幅させる場合の係数。</xsd:documentation></xsd:annotation></xsd:enumeration>
         </xsd:restriction>
     </xsd:simpleType>
     <xsd:simpleType name="speedType">
         <xsd:restriction base="xsd:string">
-            <xsd:enumeration value="craft"></xsd:enumeration>
-            <xsd:enumeration value="work"></xsd:enumeration>
+            <xsd:enumeration value="craft"><xsd:annotation><xsd:documentation xml:lang="ja">それを製作するのに必要な速度。</xsd:documentation></xsd:annotation></xsd:enumeration>
+            <xsd:enumeration value="work"><xsd:annotation><xsd:documentation xml:lang="ja">それが処理する速度。</xsd:documentation></xsd:annotation></xsd:enumeration>
         </xsd:restriction>
     </xsd:simpleType>
 </xsd:schema>
