@@ -5,7 +5,7 @@
     <xsl:template match="/">
         <html>
         <head>
-            <link type="stylesheet" href="./css/marx.min.css" />
+            <link rel="stylesheet" type="text/css" href="./css/marx.min.css" />
         </head>
             <body>
                 <xsl:apply-templates/>
