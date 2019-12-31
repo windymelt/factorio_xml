@@ -64,6 +64,13 @@
   </u>
 </xsl:template>
 
+<xsl:template match="item//recipeItem">
+<xsl:element name="a">
+    <xsl:attribute name="href"><xsl:value-of select="@name"></xsl:value-of></xsl:attribute>
+    <xsl:value-of select="."></xsl:value-of>
+</xsl:element>
+</xsl:template>
+
 <!-- default rule: ignore any unspecific text node -->
 <xsl:template match="text()" />
 
