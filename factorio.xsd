@@ -1,0 +1,63 @@
+<?xml version="1.0" ?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <xsd:element name="factorio" type="factorio"></xsd:element>
+
+    <xsd:complexType name="factorio">
+        <xsd:sequence>
+            <xsd:element name="section" type="section" maxOccurs="unbounded"></xsd:element>
+        </xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:complexType name="section">
+        <xsd:sequence>
+            <xsd:element name="item" type="item" maxOccurs="unbounded"></xsd:element>
+        </xsd:sequence>
+        <xsd:attribute name="name" use="required"></xsd:attribute>
+    </xsd:complexType>
+
+    <xsd:complexType name="item" mixed="true">
+        <xsd:choice maxOccurs="unbounded">
+            <xsd:element name="speed" type="speed"></xsd:element>
+            <xsd:element name="recipe" type="recipe"></xsd:element>
+            <xsd:element name="yield" type="xsd:float"></xsd:element>
+        </xsd:choice>
+        <xsd:attribute name="name" use="required"></xsd:attribute>
+    </xsd:complexType>
+
+    <xsd:complexType name="speed">
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:float">
+                <xsd:attribute name="unit" type="speedUnitType" use="required"></xsd:attribute>
+                <xsd:attribute name="type" type="speedType" use="required"></xsd:attribute>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+
+    <xsd:complexType name="recipe" mixed="true">
+        <xsd:all>
+            <xsd:element name="amount"></xsd:element>
+            <xsd:element name="recipeItem" type="recipeItem"></xsd:element>
+        </xsd:all>
+    </xsd:complexType>
+
+    <xsd:complexType name="recipeItem">
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:string">
+                <xsd:attribute name="name" type="xsd:string" use="required"></xsd:attribute>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+
+    <xsd:simpleType name="speedUnitType">
+        <xsd:restriction base="xsd:string">
+            <xsd:enumeration value="ips"></xsd:enumeration>
+            <xsd:enumeration value="spi"></xsd:enumeration>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:simpleType name="speedType">
+        <xsd:restriction base="xsd:string">
+            <xsd:enumeration value="craft"></xsd:enumeration>
+            <xsd:enumeration value="works"></xsd:enumeration>
+        </xsd:restriction>
+    </xsd:simpleType>
+</xsd:schema>
