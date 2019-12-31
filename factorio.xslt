@@ -58,25 +58,27 @@
     </xsl:template>
 
     <!-- override rule: <speed> nodes get special treatment -->
-  <xsl:template match="item//speed">
-  <u>
-    <xsl:value-of select="."></xsl:value-of>
-  </u>
-</xsl:template>
+    <xsl:template match="item//speed">
+        <code>
+            <xsl:value-of select="."></xsl:value-of>
+        </code>
+    </xsl:template>
 
-<xsl:template match="item//recipeItem">
-<xsl:element name="a">
-    <xsl:attribute name="href"><xsl:value-of select="@name"></xsl:value-of></xsl:attribute>
-    <xsl:value-of select="."></xsl:value-of>
-</xsl:element>
-</xsl:template>
+    <xsl:template match="item//recipeItem">
+        <xsl:element name="a">
+            <xsl:attribute name="href">
+                <xsl:value-of select="@name"></xsl:value-of>
+            </xsl:attribute>
+            <xsl:value-of select="."></xsl:value-of>
+        </xsl:element>
+    </xsl:template>
 
-<!-- default rule: ignore any unspecific text node -->
-<xsl:template match="text()" />
+    <!-- default rule: ignore any unspecific text node -->
+    <xsl:template match="text()" />
 
-<!-- override rule: copy any text node beneath item -->
-<xsl:template match="item//text()">
-  <xsl:copy-of select="." />
-</xsl:template>
+    <!-- override rule: copy any text node beneath item -->
+    <xsl:template match="item//text()">
+        <xsl:copy-of select="." />
+    </xsl:template>
 
 </xsl:stylesheet>
