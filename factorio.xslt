@@ -9,7 +9,9 @@
         </head>
             <body>
                 <header>
-                    <h1>Factorio data</h1>
+                    <h1>Factorio data in XML</h1>
+                    <p>This data can be parsed as XML.</p>
+                    <p>This XML has a XML schema definition. see <a href="factorio.xsd">factorio.xsd</a></p>
                 </header>
                 <main>
                 <xsl:apply-templates/>
