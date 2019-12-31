@@ -38,6 +38,7 @@
 
     <xsl:template match="item">
         <xsl:element name="h3">
+            <!-- Permalink --><xsl:element name="a"><xsl:attribute name="href">#<xsl:value-of select="@name"></xsl:value-of></xsl:attribute>#</xsl:element>
             <xsl:attribute name="id">
                 <xsl:value-of select="@name"></xsl:value-of>
             </xsl:attribute>
