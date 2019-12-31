@@ -20,6 +20,12 @@
     <xsl:template match="section">
         <section>
             <h2><xsl:value-of select="@name"/></h2>
+            <xsl:apply-templates/>
         </section>
+    </xsl:template>
+
+    <xsl:template match="item">
+      <h3><xsl:value-of select="@name"></xsl:value-of></h3>
+      <p><xsl:value-of select="."></xsl:value-of></p>
     </xsl:template>
 </xsl:stylesheet>
