@@ -13,7 +13,7 @@
                     <p>This data can be parsed as XML.</p>
                     <p>
                         This XML has a XML schema definition. see
-                        <a href="factorio.xsd">factorio.xsd</a>
+                        <a href="factorio.xsd">factorio.xsd</a> (XSD style by <a href="https://github.com/S2-/xsddoc">S2-/xsddoc</a>>)
                     </p>
                 </header>
                 <main>
