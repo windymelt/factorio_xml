@@ -8,7 +8,12 @@
             <link rel="stylesheet" type="text/css" href="./css/marx.min.css" />
         </head>
             <body>
+                <header>
+                    <h1>Factorio data</h1>
+                </header>
+                <main>
                 <xsl:apply-templates/>
+                </main>
             </body>
         </html>
     </xsl:template>
