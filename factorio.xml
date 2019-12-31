@@ -1,23 +1,101 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <?xml-stylesheet type="text/xsl" href="./factorio.xslt" ?>
-<factorio>
+<factorio xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="factorio.xsd">
     <section name="belt">
+        <item name="belt">
+            輸送ベルトは毎秒
+            <speed unit="ips" type="craft">15</speed>
+            個を輸送できる。
+            <recipe>
+                <amount>1</amount>
+                つの
+                <recipeItem name="iron_gear_wheel">歯車</recipeItem>
+            </recipe>
+            と
+            <recipe>
+                <amount>1</amount>
+                つの
+                <recipeItem name="iron_plate">鉄板</recipeItem>
+            </recipe>
+            とで
+            <speed unit="ips" type="craft">0.5</speed>
+            秒ごとに
+            <yield>1</yield>
+            つが生成できる。
+        </item>
+        <item name="fast_belt">
+            高速ベルトは毎秒
+            <speed unit="ips" type="works">30</speed>
+            個を輸送できる。
+            <recipe>
+                <amount>5</amount>
+                個の
+                <recipeItem name="iron_gear_wheel">歯車</recipeItem>
+            </recipe>
+            と
+            <recipe>
+                <amount>1</amount>
+                個の
+                <recipeItem name="belt">輸送ベルト</recipeItem>
+            </recipe>
+            とで
+            <speed unit="ips" type="craft">0.5</speed>
+            秒ごとに
+            <yield>1</yield>
+            つが生成できる。
+        </item>
         <item name="ultrafast_belt">
             超高速ベルトは毎秒
-            <speed unit="ips">45</speed>
+            <speed unit="ips" type="works">45</speed>
             個を輸送できる。
+            <recipe>
+                <amount>1</amount>
+                つの
+                <recipeItem name="fast_belt">高速ベルト</recipeItem>
+            </recipe>
+            と
+            <recipe>
+                <amount>10</amount>
+                個の
+                <recipeItem name="iron_gear_wheel">歯車</recipeItem>
+            </recipe>
+            と
+            <recipe>
+                <amount>20</amount>
+                単位の
+                <recipeItem name="lubricant">潤滑油</recipeItem>
+            </recipe>
+            とで
+            <yield>1</yield>
+            つが生産できる。
         </item>
     </section>
     <section name="intermediate_product">
         <item name="copper_cable">
             銅線は
-            <speed unit="spi">0.5</speed>
+            <speed unit="spi" type="craft">0.5</speed>
             秒で生産できる。
             <recipe>
-                <amount>1</amount>つの 
+                <amount>1</amount>
+                つの
                 <recipeItem name="copper_plate">銅板</recipeItem>
-            </recipe>から    
-            <yield>2</yield>つが生産できる。
+            </recipe>
+            から
+            <yield>2</yield>
+            つが生産できる。
+        </item>
+        <item name="copper_plate">
+            銅板は
+            <speed unit="spi" type="craft">3.2</speed>
+            秒で生産できる。
+            <recipe>
+                <amount>1</amount>
+                つの
+                <recipeItem name="copper_ore">銅鉱石</recipeItem>
+            </recipe>
+            から
+            <yield>1</yield>
+            つの銅板が得られる。
         </item>
     </section>
 </factorio>
