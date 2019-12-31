@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<?xml-stylesheet type="text/xsl" href="xsddoc.xsl"?>
+<?xml-stylesheet type="text/xsl" href="./xsddoc.xsl"?>
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
     <xsd:element name="factorio" type="factorio"></xsd:element>
 
