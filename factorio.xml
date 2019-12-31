@@ -106,10 +106,38 @@
             <yield>1</yield>
             つの銅板が得られる。
         </item>
+        <item name="iron_gear_wheel">
+            歯車は
+            <recipe><amount>2</amount>つの<recipeItem name="iron_plate">鉄板</recipeItem></recipe>から
+            <speed unit="spi" type="craft">0.5</speed>秒で<yield>1</yield>個生産できる。
+        </item>
+        <item name="curcuit">
+            基板は
+            <recipe><amount>3</amount>本の<recipeItem name="copper_cable">銅線</recipeItem></recipe>と
+            <recipe><amount>1</amount>枚の<recipeItem name="iron_plate">鉄板</recipeItem></recipe>から
+            <speed unit="spi" type="craft">0.5</speed>秒で<yield>1</yield>枚生産できる。
+        </item>
+        <item name="advanced_circuit">
+            発展基板は
+            <recipe><amount>4</amount>本の<recipeItem name="copper_cable">銅線</recipeItem></recipe>と
+            <recipe><amount>2</amount>枚の<recipeItem name="curcuit">基板</recipeItem></recipe>と
+            <recipe><amount>2</amount>個の<recipeItem name="plastic_bar">プラスチック棒</recipeItem></recipe>から
+            <speed unit="spi" type="craft">6</speed>秒で<yield>1</yield>枚生産できる。
+        </item>
+        <item name="control_circuit">
+            制御基板は
+            <recipe><amount>2</amount>枚の<recipeItem name="advanced_circuit">発展基板</recipeItem></recipe>と
+            <recipe><amount>20</amount>枚の<recipeItem name="circuit">基板</recipeItem></recipe>と
+            <recipe><amount>5</amount>単位の<recipeItem name="sulfuric_acid">硫酸</recipeItem></recipe>から
+            <speed unit="spi" type="craft">10</speed>秒で<yield>1</yield>枚生産できる。
+        </item>
     </section>
     <section name="ore">
         <item name="iron_ore">
             鉄鉱石の産出速度は採掘手段に依存する。
+        </item>
+        <item name="copper_ore">
+            銅鉱石の産出速度は採掘手段に依存する。
         </item>
     </section>
 </factorio>
