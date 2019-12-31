@@ -36,7 +36,7 @@
 
     <xsd:complexType name="recipe" mixed="true">
         <xsd:all>
-            <xsd:element name="amount"></xsd:element>
+            <xsd:element name="amount" type="xsd:float"></xsd:element>
             <xsd:element name="recipeItem" type="recipeItem"></xsd:element>
         </xsd:all>
     </xsd:complexType>
