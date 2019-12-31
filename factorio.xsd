@@ -16,7 +16,7 @@
     </xsd:complexType>
 
     <xsd:complexType name="item" mixed="true">
-        <xsd:choice maxOccurs="unbounded">
+        <xsd:choice minOccurs="0" maxOccurs="unbounded">
             <xsd:element name="speed" type="speed"></xsd:element>
             <xsd:element name="recipe" type="recipe"></xsd:element>
             <xsd:element name="yield" type="xsd:float"></xsd:element>
@@ -57,7 +57,7 @@
     <xsd:simpleType name="speedType">
         <xsd:restriction base="xsd:string">
             <xsd:enumeration value="craft"></xsd:enumeration>
-            <xsd:enumeration value="works"></xsd:enumeration>
+            <xsd:enumeration value="work"></xsd:enumeration>
         </xsd:restriction>
     </xsd:simpleType>
 </xsd:schema>
