@@ -4,8 +4,10 @@
     
     <xsl:template match="/">
         <html>
+        <head>
+            <link type="stylesheet" href="./css/marx.min.css" />
+        </head>
             <body>
-                <link type="stylesheet" href="./css/marx.min.css" />
                 <xsl:apply-templates/>
             </body>
         </html>
