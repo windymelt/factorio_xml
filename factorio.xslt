@@ -30,7 +30,16 @@
     </xsl:template>
 
     <xsl:template match="item">
-      <h3><xsl:value-of select="@name"></xsl:value-of></h3>
+      <xsl:element name="h3">
+        <xsl:attribute name="id">
+            <xsl:value-of select="@name"></xsl:value-of>
+        </xsl:attribute>
+        <xsl:text>
+            <xsl:value-of select="@name"></xsl:value-of>
+        </xsl:text>
+      </xsl:element>
+
       <p><xsl:value-of select="."></xsl:value-of></p>
     </xsl:template>
+
 </xsl:stylesheet>
