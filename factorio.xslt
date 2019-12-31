@@ -58,7 +58,7 @@
     </xsl:template>
 
     <!-- override rule: <speed> nodes get special treatment -->
-  <xsl:template match="description//speed">
+  <xsl:template match="item//speed">
   <u>
     <xsl:value-of select="."></xsl:value-of>
   </u>
